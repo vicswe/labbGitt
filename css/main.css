@@ -1,0 +1,45 @@
+* {
+  font-family: "ubuntu", "sans-serif"; /*Använd Ubuntu Font om möjligt, annars kör ett lämpligt font för bildskärmar.*/
+}
+
+li {
+  padding-bottom: 0.125em; /*Litet mellanrum mellan föremålen i listan som beror på typsnittets storlek.*/
+}
+
+body {
+  background: linear-gradient(to top, #190d54 0%, #034096 100%); /*Är bakgrunden fin? Den går nerifrån och upp där procentstaserna står för hur högt upp färgen ska koncentreras.*/
+  min-height: 100vh; /*Se till att färgen täcker hela sidan. Vi vill inte ha någon bariär längst ned.*/
+  margin: 0; /*Bort med marginaler. De fanns nämligen där och gjorde så man behövde scrolla trots att sidan var tillräckligt liten att få plats på skärmen.*/
+  color: white; /*Vit färg på texten.*/
+}
+
+header {
+  position: absolute; /*Placera sidhuvudet i relation till det utanförliggande elementet...*/
+  right: 2em; /*...ungefär 2 bokstäver in från höger sida.*/
+}
+
+main {
+  margin: auto; /*Placera innehållet i mitten av sidan.*/
+  padding: 0 2em; /*Se till att det aldrig är precis intill kanten av webbläsaren. Ungefär 2 bokstävers längd borde duga.*/
+  max-width: 35em; /*Se till att det är max ungefär 40 bokstäver per rad, blir jobbigt att läsa annars.*/
+  display: flex; /*Använd flex...*/
+  flex-direction: column; /*... med allt i vertikal ordning...*/
+  align-items: center; /*... för att centrera alla element.*/
+}
+
+footer {
+  display: flex; /*Använd flex på alla innanförliggande element för att...*/
+  justify-content: center; /*...centrera dem.*/
+  max-width: 100vw; /*Ta upp hela sidans bredd för att centreringen ska fungera.*/
+}
+
+a {
+  color: yellow; /*Gör länkarna gula.*/
+  text-decoration: none; /*Ta bort understrecket.*/
+}
+
+a:hover {
+  color: red; /*Gör länkarna röda vid hovring och...*/
+  text-decoration: underline; /*... lägg tillbaka understrecket och...*/
+  transition-duration: 0.25s; /*... låt den få göra en övergång på 1/4 sekund.*/
+}
